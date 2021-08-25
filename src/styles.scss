@@ -1,0 +1,48 @@
+.landing-images{
+    width: 10rem;
+    height: 10rem;
+}
+
+.home-container {
+    display: flexbox;
+}
+
+.home-box {
+    margin: 3rem;
+    padding: 3rem;
+    border: 1px solid black;
+}
+
+.blog-box {
+    margin: 3rem;
+    padding: 3rem;
+    border: 1px solid black;
+}
+
+#landing {
+    margin: 1rem 3rem;
+    padding: 1rem 3rem;
+    border: 1px solid black;
+}
+
+.copyright-footer {
+    margin: 1rem 3rem;
+    padding: 1rem 3rem;
+    border: 1px solid black;
+}
+
+.home-box-heading {
+    color: blue;
+}
+
+.blog-box-heading {
+    color: red;
+}
+
+#contact-form {
+    display: flexbox;
+    color: red;
+    margin: 3rem;
+    padding: 3rem;
+    border: 1px solid black;
+}
