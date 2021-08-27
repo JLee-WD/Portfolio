@@ -1,29 +1,110 @@
-.landing-images {
-  width: 10rem;
-  height: 10rem; }
-
-.home-container {
-  display: flexbox; }
-
-.home-box {
-  margin: 3rem;
-  padding: 3rem;
-  border: 1px solid black; }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
 
 .blog-box {
   margin: 3rem;
   padding: 3rem;
   border: 1px solid black; }
 
-#landing {
-  margin: 1rem 3rem;
-  padding: 1rem 3rem;
-  border: 1px solid black; }
+/* Navbar settings */
+body header {
+  height: 8vh; }
+
+.header-outer-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3em;
+  padding-right: 3em;
+  height: 100%; }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  /* hover color block effect on anchor tags */ }
+  .nav-container a {
+    padding: 1rem;
+    text-decoration: none;
+    position: relative; }
+  .nav-container a:visited {
+    color: black; }
+  .nav-container a::before {
+    transform: scaleX(0);
+    transform-origin: bottom right; }
+  .nav-container a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left; }
+  .nav-container a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: red;
+    z-index: -1;
+    transition: transform .3s ease; }
+
+/* Settings for landing headings */
+#landing-full {
+  display: flex;
+  height: 92vh; }
+  #landing-full #landing-left {
+    height: 92vh;
+    width: 50vw;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; }
+    #landing-full #landing-left h1 {
+      font-size: 4rem;
+      margin: 0;
+      margin-right: -3px;
+      color: white; }
+  #landing-full #landing-right {
+    height: 92vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../resources/img/wave.jpg");
+    background-size: cover;
+    background-position: center; }
+    #landing-full #landing-right h2 {
+      font-size: 2rem;
+      margin: 0;
+      padding-top: 5em; }
+
+.home-container {
+  display: flexbox; }
+  .home-container section {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-top: 1em;
+    padding-bottom: 1em; }
+
+.landing-images {
+  width: 10rem;
+  height: 10rem; }
 
 .copyright-footer {
   margin: 1rem 3rem;
-  padding: 1rem 3rem;
-  border: 1px solid black; }
+  padding: 1rem 3rem; }
 
 .home-box-heading {
   color: blue; }
