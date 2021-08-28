@@ -3,16 +3,13 @@ html, body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden; }
-
-.blog-box {
-  margin: 3rem;
-  padding: 3rem;
-  border: 1px solid black; }
+  overflow-x: hidden;
+  font-family: "Arsenal", sans-serif;
+  scroll-behavior: smooth; }
 
 /* Navbar settings */
 body header {
-  height: 8vh; }
+  height: 60px; }
 
 .header-outer-container {
   max-width: 1080px;
@@ -29,7 +26,7 @@ body header {
   height: 100%;
   /* hover color block effect on anchor tags */ }
   .nav-container a {
-    padding: 1rem;
+    padding: .5rem;
     text-decoration: none;
     position: relative; }
   .nav-container a:visited {
@@ -40,6 +37,8 @@ body header {
   .nav-container a:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left; }
+  .nav-container a:hover {
+    color: white; }
   .nav-container a::before {
     content: " ";
     display: block;
@@ -49,29 +48,30 @@ body header {
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    background: red;
+    background: grey;
     z-index: -1;
-    transition: transform .3s ease; }
+    transition: transform .4s ease; }
 
 /* Settings for landing headings */
 #landing-full {
   display: flex;
-  height: 92vh; }
+  height: 100vh; }
   #landing-full #landing-left {
-    height: 92vh;
+    height: 100vh;
     width: 50vw;
-    background-color: gray;
+    background-color: grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end; }
     #landing-full #landing-left h1 {
-      font-size: 4rem;
+      font-size: 5rem;
       margin: 0;
       margin-right: -3px;
-      color: white; }
+      color: white;
+      font-weight: 400; }
   #landing-full #landing-right {
-    height: 92vh;
+    height: 100vh;
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -81,36 +81,54 @@ body header {
     background-size: cover;
     background-position: center; }
     #landing-full #landing-right h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin: 0;
-      padding-top: 5em; }
+      padding-top: 12em; }
+    #landing-full #landing-right #landing-links {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem; }
+      #landing-full #landing-right #landing-links a {
+        padding-top: .5rem;
+        text-decoration: none; }
+      #landing-full #landing-right #landing-links a:visited {
+        color: black; }
 
-.home-container {
-  display: flexbox; }
-  .home-container section {
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .landing-container p {
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 3em;
     padding-right: 3em;
-    padding-left: 6em;
-    padding-right: 6em;
-    padding-top: 1em;
-    padding-bottom: 1em; }
+    padding: 1rem 6rem; }
+  .landing-container section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto; }
+    .landing-container section img {
+      width: 10rem;
+      height: 10rem;
+      padding: 10px; }
 
-.landing-images {
-  width: 10rem;
-  height: 10rem; }
-
+@media (min-width: 1200px) {
+  .landing-container section {
+    width: 700px; } }
+@media (max-width: 800px) {
+  .landing-container section {
+    width: 400px; } }
+@media (max-width: 400px) {
+  .landing-container section {
+    width: 200px; } }
 .copyright-footer {
   margin: 1rem 3rem;
   padding: 1rem 3rem; }
-
-.home-box-heading {
-  color: blue; }
-
-.blog-box-heading {
-  color: red; }
 
 #contact-form {
   display: flexbox;
