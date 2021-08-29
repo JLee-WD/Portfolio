@@ -15,8 +15,8 @@ body header {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 4rem;
+  padding-right: 4rem;
   height: 100%; }
 
 .nav-container {
@@ -30,7 +30,7 @@ body header {
     text-decoration: none;
     position: relative; }
   .nav-container a:visited {
-    color: black; }
+    color: #969696; }
   .nav-container a::before {
     transform: scaleX(0);
     transform-origin: bottom right; }
@@ -48,7 +48,7 @@ body header {
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    background: grey;
+    background: #969696;
     z-index: -1;
     transition: transform .4s ease; }
 
@@ -59,7 +59,7 @@ body header {
   #landing-full #landing-left {
     height: 100vh;
     width: 50vw;
-    background-color: grey;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +68,7 @@ body header {
       font-size: 5rem;
       margin: 0;
       margin-right: -3px;
-      color: white;
+      color: #c8c8c8;
       font-weight: 400; }
   #landing-full #landing-right {
     height: 100vh;
@@ -83,28 +83,33 @@ body header {
     #landing-full #landing-right h2 {
       font-size: 1.5rem;
       margin: 0;
-      padding-top: 12em; }
+      padding-top: 19rem;
+      color: #969696; }
     #landing-full #landing-right #landing-links {
       display: flex;
       flex-direction: column;
       padding-top: 1rem; }
       #landing-full #landing-right #landing-links a {
         padding-top: .5rem;
-        text-decoration: none; }
+        text-decoration: none;
+        color: #969696; }
       #landing-full #landing-right #landing-links a:visited {
-        color: black; }
+        color: #969696; }
 
 .landing-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4rem;
+  padding-right: 4rem; }
   .landing-container p {
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding: 1rem 6rem; }
+    padding: 3rem 6rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #969696; }
   .landing-container section {
     display: flex;
     flex-wrap: wrap;
@@ -128,7 +133,8 @@ body header {
     width: 200px; } }
 .copyright-footer {
   margin: 1rem 3rem;
-  padding: 1rem 3rem; }
+  text-align: center;
+  color: #c8c8c8; }
 
 #contact-form {
   display: flexbox;
