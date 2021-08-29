@@ -1,7 +1,11 @@
+/*Colours and fonts*/
+
 $light-gray-color: rgb(200, 200, 200);
 $dark-gray-color: rgb(150, 150, 150);
 $white-color: white;
 $primary-font: 'Arsenal', sans-serif;
+
+/*SASS mixins*/
 
 @mixin content-sizes {
     max-width: 1080px;
@@ -10,6 +14,15 @@ $primary-font: 'Arsenal', sans-serif;
     padding-left: 4rem;
     padding-right: 4rem;
 }
+
+@mixin large-text {
+    padding: 3rem 6rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $dark-gray-color;
+}
+
+/*HTML reset*/
 
 html,body
 {
@@ -24,13 +37,9 @@ html,body
 
 /* Navbar settings */
 
-body header {
-    height: 60px;
-}
-
 .header-outer-container {
     @include content-sizes();
-    height: 100%;
+    height: 60px;
 }
 
 .nav-container {
@@ -73,7 +82,6 @@ body header {
         z-index: -1;
         transition: transform .4s ease;
     }
-
 }
 
 /* Settings for landing headings */
@@ -121,6 +129,7 @@ body header {
                 padding-top: .5rem;
                 text-decoration: none;
                 color: $dark-gray-color;
+                font-size: 1rem;
             }
             a:visited {
                 color: $dark-gray-color;
@@ -129,17 +138,15 @@ body header {
     }
 }
 
+/*Index - About me styling*/
 
-.landing-container {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     @include content-sizes();
     p {
-        padding: 3rem 6rem;
-        font-size: 1.5rem;
-        text-align: center;
-        color: $dark-gray-color;
+        @include large-text();
     }
     section {
         display: flex;
@@ -153,11 +160,71 @@ body header {
             height: 10rem;
             padding: 10px;
         }
+        span {
+                @include large-text();
+        }
+    }
+
+
+    /*Recent Projects styling*/
+
+    main {
+        border-bottom: 1px solid $light-gray-color;
+        ul{
+            padding-left: 0;
+            li{
+                display: flex;
+                list-style: none;
+                height: 15rem;
+                // overflow: hidden;
+                padding-bottom: 3rem;
+                padding-top: 3rem;
+                border-top: 1px solid $light-gray-color;
+                time {
+                    font-size: 1.5rem;
+                }
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h4 {
+                        font-size: 1.5rem;
+                        padding: 0 1rem 1rem 1rem;
+                        margin: 0;
+                    }
+                    p {
+                        font-size: 1rem;
+                        padding-top: 0;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        padding-bottom: 0;
+                        margin: 0;
+                        text-align: left;
+                        flex-grow: 2;
+                    }
+                    a {
+                        padding: 1rem 1rem 0 1rem;
+                    }
+                    a:visited {
+                        color: $dark-gray-color;
+                    }
+                }
+                        img {
+                            float: right;
+                            min-width: 240px;
+                            height: 240px;
+                            object-fit: cover;
+                        }
+                    
+                
+            }
+        }
     }
 }
 
+/*Media Breakpoints*/
 @media (min-width: 1200px) {
-    .landing-container{
+    .container{
         section {
             width: 700px;
         }
@@ -165,7 +232,7 @@ body header {
 }
 
 @media (max-width: 800px) {
-    .landing-container{
+    .container{
         section {
             width: 400px;
         }
@@ -173,12 +240,15 @@ body header {
 }
 
 @media (max-width: 400px) {
-    .landing-container{
+    .container{
         section {
             width: 200px;
         }
     }
 }
+
+
+/*Copyright footer styling*/
 
 .copyright-footer {
     margin: 1rem 3rem;
