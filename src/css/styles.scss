@@ -3,6 +3,8 @@
 $light-gray-color: rgb(200, 200, 200);
 $dark-gray-color: rgb(150, 150, 150);
 $white-color: white;
+$primary-color: #93CAED;
+$secondary-color: #EDB693;
 $primary-font: 'Arsenal', sans-serif;
 
 /*SASS mixins*/
@@ -15,11 +17,56 @@ $primary-font: 'Arsenal', sans-serif;
     padding-right: 4rem;
 }
 
-@mixin large-text {
+@mixin large-paragraph-text {
     padding: 3rem 6rem;
     font-size: 1.5rem;
     text-align: center;
     color: $dark-gray-color;
+}
+
+@mixin paragraph-text {
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+}
+
+@mixin page-title {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+@mixin sub-title {
+    font-size: 1.5rem;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+    color: $dark-gray-color;
+}
+
+@mixin background-swipe {
+    a {
+        transition: color 0.4s ease;
+        position: relative;
+    }
+    a::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+    a:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    a::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        inset: 0 0 0 0;
+        background: $primary-color;
+        z-index: -1;
+        transition: transform .4s ease;
+    }
 }
 
 /*HTML reset*/
@@ -48,40 +95,19 @@ html,body
     align-items: center;
     height: 100%;
     a {
-        padding: .5rem;
+        padding: .5rem .7rem;
         text-decoration: none;
         position: relative;
+        font-size: 1.3rem;
     }
     a:visited {
         color: $dark-gray-color;
-    }
-
-    /* hover color block effect on anchor tags */
-
-    a::before {
-        transform: scaleX(0);
-        transform-origin: bottom right;
-    }
-
-    a:hover::before {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-
+    }            
     a:hover {
         color: $white-color;
     }
 
-    a::before {
-        content: " ";
-        display: block;
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        inset: 0 0 0 0;
-        background: $dark-gray-color;
-        z-index: -1;
-        transition: transform .4s ease;
-    }
+    @include background-swipe();
 }
 
 /* Settings for landing headings */
@@ -125,14 +151,20 @@ html,body
             display: flex;
             flex-direction: column;
             padding-top: 1rem;
+            @include background-swipe();
             a {
-                padding-top: .5rem;
+                padding-top: .25rem;
+                padding-bottom: .25rem;
                 text-decoration: none;
-                color: $dark-gray-color;
                 font-size: 1rem;
+                z-index: 1;
+                padding-right: .5rem;
             }
             a:visited {
                 color: $dark-gray-color;
+            }
+            a:hover {
+                color: $white-color;
             }
         }
     }
@@ -145,8 +177,13 @@ html,body
     flex-direction: column;
     justify-content: center;
     @include content-sizes();
-    p {
-        @include large-text();
+    h1 {
+        @include page-title();
+    }
+    p {        
+        @include large-paragraph-text();
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
     section {
         display: flex;
@@ -161,65 +198,133 @@ html,body
             padding: 10px;
         }
         span {
-                @include large-text();
+                @include large-paragraph-text();
+                padding-top: 7rem;
+                padding-bottom: 7rem;
         }
     }
 
 
     /*Recent Projects styling*/
-
-    main {
-        border-bottom: 1px solid $light-gray-color;
-        ul{
+        
+        .projects-posts {
             padding-left: 0;
+            border-bottom: 1px solid $light-gray-color;
             li{
                 display: flex;
                 list-style: none;
                 height: 15rem;
-                // overflow: hidden;
                 padding-bottom: 3rem;
                 padding-top: 3rem;
                 border-top: 1px solid $light-gray-color;
                 time {
                     font-size: 1.5rem;
+                    color: $primary-color;
+                    min-width: 3rem;
                 }
-                div {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    h4 {
-                        font-size: 1.5rem;
-                        padding: 0 1rem 1rem 1rem;
-                        margin: 0;
-                    }
-                    p {
-                        font-size: 1rem;
-                        padding-top: 0;
-                        padding-left: 1rem;
-                        padding-right: 1rem;
-                        padding-bottom: 0;
-                        margin: 0;
-                        text-align: left;
-                        flex-grow: 2;
-                    }
-                    a {
-                        padding: 1rem 1rem 0 1rem;
-                    }
-                    a:visited {
-                        color: $dark-gray-color;
-                    }
-                }
-                        img {
-                            float: right;
-                            min-width: 240px;
-                            height: 240px;
-                            object-fit: cover;
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+            
+                        h4 {
+                            @include sub-title();
                         }
-                    
-                
+                        p {
+                            @include paragraph-text();
+                            padding-top: 0;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                            padding-bottom: 0;
+                            flex-grow: 2;
+                        }
+                        @include background-swipe();
+                        a {
+                            margin-left: .5rem;
+                            margin-right: auto;
+                            padding: .5rem;
+                            text-decoration: none;
+                            color: $dark-gray-color;
+                        }
+                        a:visited {
+                            color: $dark-gray-color;
+                        }
+                        a:hover {
+                            color: $white-color;
+                        }
+                    }
+                    img {
+                        float: right;
+                        min-width: 240px;
+                        height: 240px;
+                        object-fit: cover;
+                    }
             }
         }
-    }
+        .blog-posts {
+            padding-left: 0;
+            border-bottom: 1px solid $light-gray-color;
+            li{
+                display: flex;
+                list-style: none;
+                    max-height: 30rem;
+                padding-bottom: 3rem;
+                border-top: 1px solid $light-gray-color;
+                time {
+                    font-size: 1.5rem;
+                    color: $primary-color;
+                    min-width: 3rem;
+                    padding: 3rem 0 1rem 0;
+                }
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+            
+                        h4 {
+                            @include sub-title();
+                                padding-left: 0;
+                        }
+                        p {
+                            @include paragraph-text();
+                            padding-top: 0;
+                                padding-left: 0;
+                            padding-right: 1rem;
+                            padding-bottom: 0;
+                            flex-grow: 2;
+                        }
+                        @include background-swipe();
+                        a {
+                            margin-right: auto;
+                                padding: .5rem 0;
+                            text-decoration: none;
+                            color: $dark-gray-color;
+                        }
+                        a:visited {
+                            color: $dark-gray-color;
+                        }
+                        a:hover {
+                            color: $white-color;
+                        }
+                    }
+                    img {
+                        float: right;
+                        min-width: 240px;
+                        height: 240px;
+                        object-fit: cover;
+                        padding-top: 1rem;
+                    }
+            }
+        }
+}
+
+#read-more-tag {
+        font-size: 1.5rem;
+        text-decoration: none;
+}
+
+#read-more-tag:visited {
+    color: $dark-gray-color;
 }
 
 /*Media Breakpoints*/
