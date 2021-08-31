@@ -25,6 +25,7 @@ $primary-font: 'Arsenal', sans-serif;
 }
 
 @mixin paragraph-text {
+    font-family: $primary-font;
     font-size: 1rem;
     margin: 0;
     text-align: left;
@@ -98,7 +99,7 @@ html,body
         padding: .5rem .7rem;
         text-decoration: none;
         position: relative;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     a:visited {
         color: $dark-gray-color;
@@ -124,7 +125,7 @@ html,body
         justify-content: center;
         align-items: flex-end;
         h1 {
-            font-size: 5rem;
+            font-size: 6rem;
             margin: 0;
             margin-right: -3px;
             color: $light-gray-color;
@@ -144,7 +145,7 @@ html,body
         h2 {
             font-size: 1.5rem;
             margin: 0;
-            padding-top: 19rem;
+            padding-top: 27rem;
             color: $dark-gray-color;
         }
         #landing-links{
@@ -156,9 +157,10 @@ html,body
                 padding-top: .25rem;
                 padding-bottom: .25rem;
                 text-decoration: none;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 z-index: 1;
-                padding-right: .5rem;
+                padding-right: 1rem;
+                margin-top: 1rem;
             }
             a:visited {
                 color: $dark-gray-color;
@@ -205,7 +207,7 @@ html,body
     }
 
 
-    /*Recent Projects styling*/
+        /*Recent Projects styling*/
         
         .projects-posts {
             padding-left: 0;
@@ -261,6 +263,9 @@ html,body
                     }
             }
         }
+
+        /* Blog posts styling */
+
         .blog-posts {
             padding-left: 0;
             border-bottom: 1px solid $light-gray-color;
@@ -316,6 +321,68 @@ html,body
                     }
             }
         }
+        
+
+        @include background-swipe();
+
+        #read-more-tag {
+            position: relative;
+        }
+        #read-more-tag:hover {
+            color: $white-color;
+        }
+
+        /* Contact page styling */
+        .contact-details-container {
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                input {
+                    @include paragraph-text();
+                    width: 20rem;
+                    margin-bottom: 1rem;
+                    padding: .5rem;
+                    border-radius: 10px;
+                    border: 1px solid $light-gray-color;
+                }
+                textarea {
+                    @include paragraph-text();
+                    width: 20rem;
+                    padding: .5rem;
+                    resize: none;
+                    border-radius: 10px;
+                    border: 1px solid $light-gray-color;
+                }
+                .button {
+                    text-align: center;
+                    margin-top: 1rem;
+                    width: 10rem;
+                    transition: .5s;
+                }
+                .button:hover {
+                    background-color: $primary-color;
+                    color: $white-color;
+                    cursor: pointer;
+                    border-color: $white-color;
+                }
+            }
+            div {
+                display: flex;
+                justify-content: space-between;
+                margin: 3rem auto;
+                width: 20rem;
+                i {
+                    color: $dark-gray-color;
+                    transition: 0.5s;
+                    cursor: pointer;
+                }
+                i:hover {
+                    color: $primary-color;
+                }
+            }
+                
+        }
 }
 
 #read-more-tag {
@@ -356,15 +423,7 @@ html,body
 /*Copyright footer styling*/
 
 .copyright-footer {
-    margin: 1rem 3rem;
+    margin-top: 5rem;
     text-align: center;
     color: $light-gray-color;
-}
-
-#contact-form {
-    display: flexbox;
-    color: red;
-    margin: 3rem;
-    padding: 3rem;
-    border: 1px solid black;
 }

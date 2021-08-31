@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Contact - Justin Lee - Portfolio</title>
+    <script src="https://kit.fontawesome.com/d5e94de1f5.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -24,40 +25,26 @@
         </nav>
     </header>
 
-    <div class="home-container">
-        <header id="landing">
-            <h1>CONTACT</h1>
-        </header>
-        <section class="home-box">
-            <h3 class="home-box-heading">Details</h3>
-            <ul>
-                <li>Phone Number: 0411 111 111</li>
-                <li>Email: justin@email.com</li>
-                <li>LinkedIn: justinL</li>
-                <li>Github: justinL</li>
-            </ul>
-        </section>
-        <form id="contact-form">
-            <h3 class="home-box-heading">Contact me</h3>
-            <ul>
-                <li>
-                    <label for="name">Enter your name: </label>
-                    <input type="text" name="name" id="name" required>
-                </li>
-                <li>
-                    <label for="name">Enter your email: </label>
-                    <input type="text" name="email" id="email" required></li>
-                <li>
-                    <label for="name">Subject: </label>
-                    <input type="text" name="Subject" id="Subject" required></li>
-                <li>
-                    <label for="name">Message: </label>
-                    <input type="text" name="Message" id="Message" required></li>
-            </ul>
-        </form>
-        <footer class="copyright-footer">
-            <p>&#169 copyright Justin Lee 2021</p>
-        </footer>
+    <div class="container">         
+        <h1>CONTACT</h1>
+        <main class="contact-details-container">   
+            <form id="contact-form">
+                <input type="text" placeholder="Your name..." name="name" id="name" required>
+                <input type="text" placeholder="Your email..." name="email" id="email" required>
+                <input type="text" placeholder="Subject..." name="Subject" id="Subject" required>
+                <textarea rows="10" placeholder="Write your message here..."></textarea>
+                <input class="button" type="submit" value="Send">
+            </form>
+            <div>
+                <i class="fab fa-stack-overflow fa-3x"></i>
+                <i class="fab fa-linkedin fa-3x"></i>
+                <i class="fab fa-github-square fa-3x"></i>
+                <i class="fas fa-envelope fa-3x"></i>
+            </div>
+        </main>
     </div>
+    <footer class="copyright-footer">
+        <p>&#169 copyright Justin Lee 2021</p>
+    </footer>
 </body>
 </html>
