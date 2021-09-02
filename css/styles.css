@@ -72,7 +72,8 @@ html, body {
 /* Settings for landing headings */
 #landing-full {
   display: flex;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   #landing-full #landing-left {
     height: 100vh;
     width: 30vw;
@@ -88,7 +89,8 @@ html, body {
       color: #c8c8c8;
       font-weight: 400;
       font-family: 'Covered By Your Grace', cursive;
-      margin-top: -2rem; }
+      margin-top: -2rem;
+      padding-top: 20rem; }
   #landing-full #landing-right {
     height: 100vh;
     width: 70vw;
@@ -145,6 +147,48 @@ html, body {
   text-decoration: none;
   color: #93CAED;
   padding: 0; }
+
+#icon-cover {
+  position: absolute;
+  top: 30%;
+  right: 40%;
+  left: 0;
+  width: 196px;
+  height: 196px;
+  margin: -98px auto 0 auto;
+  background-image: url("/resources/img/Justin-square.jpg");
+  background-position: center;
+  background-size: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #e7e7e7;
+  overflow: hidden; }
+
+#icon-checkbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  z-index: 3; }
+
+#icon-layer {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 0;
+  height: 0;
+  background-color: #93CAED;
+  border-radius: 50%;
+  transition: 0.25s ease all;
+  z-index: 1; }
+
+#icon-checkbox:checked ~ #icon-layer {
+  width: 226px;
+  height: 226px; }
 
 /*Index - About me styling*/
 .container {
