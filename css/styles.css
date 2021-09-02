@@ -24,25 +24,16 @@ html, body {
   justify-content: space-between;
   align-items: center;
   height: 100%; }
-  .nav-container a {
-    padding: .5rem .7rem;
-    text-decoration: none;
-    position: relative;
-    font-size: 1.2rem; }
-  .nav-container a:visited {
-    color: #969696; }
-  .nav-container a:hover {
-    color: white; }
-  .nav-container a {
+  .nav-container div a {
     transition: color 0.4s ease;
     position: relative; }
-  .nav-container a::before {
+  .nav-container div a::before {
     transform: scaleX(0);
     transform-origin: bottom right; }
-  .nav-container a:hover::before {
+  .nav-container div a:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left; }
-  .nav-container a::before {
+  .nav-container div a::before {
     content: " ";
     display: block;
     position: absolute;
@@ -54,11 +45,29 @@ html, body {
     background: #93CAED;
     z-index: -1;
     transition: transform .4s ease; }
+  .nav-container div a {
+    padding: .5rem .7rem;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.2rem; }
+  .nav-container div a:visited {
+    color: #969696; }
+  .nav-container div a:hover {
+    color: white; }
 
 #name-logo {
   font-family: 'Covered By Your Grace', cursive;
-  font-size: 2rem;
-  padding: 2px 10px; }
+  font-size: 2.5rem;
+  padding: 2px 10px;
+  text-decoration: none;
+  transition: .5s; }
+
+#name-logo:visited {
+  color: #969696; }
+
+#name-logo:hover {
+  color: #93CAED;
+  transform: scale(1.2); }
 
 /* Settings for landing headings */
 #landing-full {
@@ -121,7 +130,7 @@ html, body {
         z-index: -1;
         transition: transform .4s ease; }
       #landing-full #landing-right #landing-links a {
-        padding-top: 1rem;
+        margin-top: 1rem;
         padding-bottom: .25rem;
         text-decoration: none;
         font-size: 1.2rem;
@@ -134,7 +143,8 @@ html, body {
 
 #contact-me {
   text-decoration: none;
-  color: #93CAED; }
+  color: #93CAED;
+  padding: 0; }
 
 /*Index - About me styling*/
 .container {
@@ -349,15 +359,15 @@ html, body {
   position: relative;
   color: #969696; }
 
-#read-more-tag:hover {
-  color: white; }
-
 #read-more-tag {
   font-size: 1.5rem;
   text-decoration: none; }
 
 #read-more-tag:visited {
   color: #969696; }
+
+#read-more-tag:hover {
+  color: white; }
 
 /* Contact page styling */
 .contact-details-container form {
@@ -409,17 +419,10 @@ html, body {
     color: #93CAED; }
 
 /*Media Breakpoints*/
-@media screen and (max-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+@media (max-width: 1200px) {
   .container section {
-    width: 800px; }
-
-  #landing-full #landing-left {
-    align-items: center; }
-    #landing-full #landing-left h1 {
-      writing-mode: vertical-rl;
-      padding-top: 4rem;
-      font-size: 10rem; } }
-@media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    width: 800px; } }
+@media (max-width: 1024px) {
   .container section {
     width: 600px; }
     .container section span {
@@ -438,18 +441,25 @@ html, body {
     .projects-posts li div a {
       padding-left: 0;
       margin-left: 0;
-      padding-top: 1rem;
-      padding-bottom: 1rem; }
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
 
   .blog-posts li {
     max-height: 35rem; }
     .blog-posts li div p {
       padding-right: 0; }
     .blog-posts li div a {
-      padding-top: 1rem; }
+      margin-top: 1rem; }
     .blog-posts li img {
-      width: 100%; } }
-@media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+      width: 100%; }
+
+  #landing-full #landing-left {
+    align-items: center; }
+    #landing-full #landing-left h1 {
+      writing-mode: vertical-rl;
+      padding-top: 4rem;
+      font-size: 10rem; } }
+@media (max-width: 480px) {
   .header-outer-container {
     padding-left: 2rem;
     padding-right: 2rem; }

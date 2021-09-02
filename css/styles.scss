@@ -95,27 +95,42 @@ html,body
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    a {
-        padding: .5rem .7rem;
-        text-decoration: none;
-        position: relative;
-        font-size: 1.2rem;
-    }
-    a:visited {
-        color: $dark-gray-color;
-    }            
-    a:hover {
-        color: $white-color;
+    div {
+        @include background-swipe();
+        a {
+            padding: .5rem .7rem;
+            text-decoration: none;
+            position: relative;
+            font-size: 1.2rem;
+        }
+        a:visited {
+            color: $dark-gray-color;
+        }            
+        a:hover {
+            color: $white-color;
+        }
     }
 
-    @include background-swipe();
+
 }
 
 #name-logo {
     font-family: 'Covered By Your Grace', cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 2px 10px;
+    text-decoration: none;
+    transition: .5s;
 }
+
+#name-logo:visited {
+    color: $dark-gray-color;
+}
+
+#name-logo:hover {
+    color: $primary-color;
+    transform: scale(1.2);
+}
+
 
 /* Settings for landing headings */
 
@@ -162,7 +177,7 @@ html,body
             padding-top: 1rem;
             @include background-swipe();
             a {
-                padding-top: 1rem;
+                margin-top: 1rem;
                 padding-bottom: .25rem;
                 text-decoration: none;
                 font-size: 1.2rem;
@@ -182,6 +197,7 @@ html,body
 #contact-me {
     text-decoration: none;
     color: $primary-color;
+    padding: 0;
 }
 
 /*Index - About me styling*/
@@ -346,17 +362,15 @@ html,body
     color: $dark-gray-color;
     }
 }
-#read-more-tag:hover {
-    color: $white-color;
-}
-
 #read-more-tag {
     font-size: 1.5rem;
     text-decoration: none;
 }
-
 #read-more-tag:visited {
-color: $dark-gray-color;
+    color: $dark-gray-color;
+}
+#read-more-tag:hover {
+    color: $white-color;
 }
 
 /* Contact page styling */
@@ -416,29 +430,15 @@ color: $dark-gray-color;
 }
 
 /*Media Breakpoints*/
-@media screen 
-  and (max-device-width: 1200px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+@media (max-width: 1200px) { 
     .container {
         section {
             width: 800px;
         }
     }
-    #landing-full {
-        #landing-left {
-            align-items: center;
-            h1 {
-                writing-mode: vertical-rl;
-                padding-top: 4rem;
-                font-size: 10rem;
-            }
-        }
-    }
 }
 
-@media only screen 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+@media (max-width: 1024px) {
     .container{
         section {
             width: 600px;
@@ -465,8 +465,8 @@ color: $dark-gray-color;
                 a {
                     padding-left: 0;
                     margin-left: 0;
-                    padding-top: 1rem;
-                    padding-bottom: 1rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
                 }
             }
         }   
@@ -479,20 +479,27 @@ color: $dark-gray-color;
                     padding-right: 0;
                 }
                 a { 
-                    padding-top: 1rem;
+                    margin-top: 1rem;
                 }
             }
             img {
                 width: 100%;
             }
         }
-
+    }
+    #landing-full {
+        #landing-left {
+            align-items: center;
+            h1 {
+                writing-mode: vertical-rl;
+                padding-top: 4rem;
+                font-size: 10rem;
+            }
+        }
     }
 }
 
-@media only screen 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+@media (max-width: 480px) {
     .header-outer-container {
         padding-left: 2rem;
         padding-right: 2rem;
