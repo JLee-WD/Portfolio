@@ -102,6 +102,7 @@ html,body
             text-decoration: none;
             position: relative;
             font-size: 1.2rem;
+            color: $dark-gray-color;
         }
         a:visited {
             color: $dark-gray-color;
@@ -120,6 +121,7 @@ html,body
     padding: 2px 10px;
     text-decoration: none;
     transition: .5s;
+    color: $dark-gray-color;
 }
 
 #name-logo:visited {
@@ -140,57 +142,65 @@ html,body
     position: relative;
     #landing-left {
         height: 100vh;
-        width: 30vw;
+        width: 40vw;
         background-color: $white-color;
-        display: flex;
+        display: block;
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-        h1 {
-            font-size: 7rem;
-            margin: 0;
-            margin-right: 1rem;
-            color: $light-gray-color;
-            font-weight: 400;
-            font-family: 'Covered By Your Grace', cursive;
-            margin-top: -2rem;
-            padding-top: 20rem;
-        }
-    }
-    #landing-right {
-        height: 100vh;
-        width: 70vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        background-image: url("../resources/img/wave.jpg");
-        background-size: cover;
-        background-position: center;
-        h2 {
-            font-size: 1.6rem;
-            margin: 0;
-            padding-top: 20rem;
-            color: $dark-gray-color;
-        }
-        #landing-links{
+        text-align: right;
+        padding-right: 3rem;
+        #links-title-container {
+            #landing-links {
             display: flex;
             flex-direction: column;
-            padding-top: 1rem;
+            padding-bottom: 5rem;
             @include background-swipe();
             a {
-                margin-top: 1rem;
-                padding-bottom: .25rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
                 text-decoration: none;
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 z-index: 1;
-                padding-right: 1rem;
+                padding-left: 3rem;
+                color: $dark-gray-color;
+                font-family: $primary-font;
             }
             a:visited {
                 color: $dark-gray-color;
             }
             a:hover {
                 color: $white-color;
+            }
+        }
+        }
+        h2 {
+            font-size: 1.2rem;
+            color: $light-gray-color;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    #landing-right {
+        height: 100vh;
+        width: 70vw;
+        background-image: url("../resources/img/wave.jpg");
+        background-size: cover;
+        background-position: center;
+        div {        
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 7rem;
+            h1 {
+                font-size: 13rem;
+                margin: 0;
+                color: $primary-color;
+                font-weight: 400;
+                font-family: 'Covered By Your Grace', cursive;
+                margin-top: -5rem;
             }
         }
     }
@@ -204,54 +214,24 @@ html,body
 
 // Clickable Icon Styling
 
-#icon-cover
-{
-    position: absolute;
-    top: 30%;
-    right: 40%;
-    left: 0;
-    width: 196px;
-    height: 196px;
-    margin: -98px auto 0 auto;
-    background-image: url("/resources/img/Justin-square.jpg");
+#portrait-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#icon-cover {
+    width: 200px;
+    height: 200px;
+    background-image: url("../resources/img/Justin-square.jpg");
     background-position: center;
     background-size: 200px;
     border-radius: 50%;
-    box-shadow: 0 0 0 8px rgb(231, 231, 231);
+    box-shadow: 0 0 0 10px $white-color;
     overflow: hidden;
-}
-
-#icon-checkbox
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    opacity: 0;
-    z-index: 3;
-}
-
-#icon-layer
-{
-    position: absolute;
-    right: -20px;
-    bottom: -20px;
-    width: 0;
-    height: 0;
-    background-color: $primary-color;
-    border-radius: 50%;
-    transition: 0.25s ease all;
-    z-index: 1;
-}
-
-#icon-checkbox:checked ~ #icon-layer
-{
-    width: 226px;
-    height: 226px;
 }
 
 /*Index - About me styling*/
@@ -504,6 +484,12 @@ html,body
             }
         }
     }
+
+    #icon-cover {
+    top: 15%;
+    right: 20%;
+    }
+    
     .projects-posts {
         li{
             flex-direction: column;
@@ -543,17 +529,23 @@ html,body
     }
     #landing-full {
         #landing-left {
-            align-items: center;
-            h1 {
-                writing-mode: vertical-rl;
-                padding-top: 4rem;
-                font-size: 10rem;
-            }
+            // align-items: center;
+            width: 30vw;
+            padding-right: 1rem;
+        }
+        #landing-right {
+            width: 70vw;
+            div {
+                padding-top: 0;
+                h1 {
+                    font-size: 11rem;
+                }
+            } 
         }
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     .header-outer-container {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -565,13 +557,33 @@ html,body
     }
     #landing-full {
         #landing-left {
-            align-items: center;
-            h1 {
-                writing-mode: vertical-rl;
-                padding-top: 4rem;
-                font-size: 7rem;
+            width: 30vw;
+            #links-title-container {
+                #landing-links {
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+                
+            }
+            h2 {
+                font-size: 1.2rem;
             }
         }
+        #landing-right {
+            width: 70vw;
+            div {
+                padding-top: 2rem;
+                h1 {
+                    font-size: 6rem;
+                    padding-top: 2rem;
+                }
+            }
+        }
+    }
+    #portrait-container {
+        width: 200px;
+        padding-left: 20px;
     }
     .container {
         padding-left: 2rem;
