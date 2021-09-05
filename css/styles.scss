@@ -249,31 +249,34 @@ html,body
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
-    section {
-        display: flex;
-        flex-wrap: wrap;
-        width: 1000px;
-        justify-content: center;
-        margin: auto auto;
-        a {
+}
+#landing-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    justify-content: center;
+    margin: auto auto;
+    a {
+        width: 15rem;
+        height: 15rem;
+        overflow: hidden;
+        padding: 1rem;
+        img {
             width: 15rem;
             height: 15rem;
-            overflow: hidden;
-            padding: 1rem;
-            img {
-                width: 15rem;
-                height: 15rem;
-                object-fit: cover;
-            }
-        }
-        span {
-                @include large-paragraph-text();
-                padding-top: 7rem;
-                padding-bottom: 2rem;
+            object-fit: cover;
         }
     }
 }
-
+div {
+    display: flex;
+    justify-content: center;
+    span {
+        @include large-paragraph-text();
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+    }   
+}
 /*Recent Projects styling*/
 
 .projects-posts {
@@ -466,7 +469,7 @@ html,body
 /*Media Breakpoints*/
 @media (max-width: 1200px) { 
     .container {
-        section {
+        #landing-images-container {
             width: 800px;
         }
     }
@@ -474,8 +477,10 @@ html,body
 
 @media (max-width: 1024px) {
     .container{
-        section {
+        #landing-images-container {
             width: 600px;
+        }
+        div {
             span {
                 padding: 3rem 2rem 0 2rem;
                 a {
@@ -588,8 +593,10 @@ html,body
     .container {
         padding-left: 2rem;
         padding-right: 2rem;
-        section {
+        #landing-images-container {
             width: 300px;
+        }
+        div {
             span {
                 padding: 3rem 2rem 0 2rem;
                 a {

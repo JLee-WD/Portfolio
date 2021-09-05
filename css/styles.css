@@ -195,28 +195,33 @@ html, body {
     color: #969696;
     padding-top: 6rem;
     padding-bottom: 6rem; }
-  .container section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1000px;
-    justify-content: center;
-    margin: auto auto; }
-    .container section a {
+
+#landing-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  justify-content: center;
+  margin: auto auto; }
+  #landing-images-container a {
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    padding: 1rem; }
+    #landing-images-container a img {
       width: 15rem;
       height: 15rem;
-      overflow: hidden;
-      padding: 1rem; }
-      .container section a img {
-        width: 15rem;
-        height: 15rem;
-        object-fit: cover; }
-    .container section span {
-      padding: 3rem 6rem;
-      font-size: 1.5rem;
-      text-align: center;
-      color: #969696;
-      padding-top: 7rem;
-      padding-bottom: 2rem; }
+      object-fit: cover; }
+
+div {
+  display: flex;
+  justify-content: center; }
+  div span {
+    padding: 3rem 6rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #969696;
+    padding-top: 7rem;
+    padding-bottom: 2rem; }
 
 /*Recent Projects styling*/
 .projects-posts {
@@ -447,15 +452,15 @@ html, body {
 
 /*Media Breakpoints*/
 @media (max-width: 1200px) {
-  .container section {
+  .container #landing-images-container {
     width: 800px; } }
 @media (max-width: 1024px) {
-  .container section {
+  .container #landing-images-container {
     width: 600px; }
-    .container section span {
-      padding: 3rem 2rem 0 2rem; }
-      .container section span a {
-        padding: 0; }
+  .container div span {
+    padding: 3rem 2rem 0 2rem; }
+    .container div span a {
+      padding: 0; }
 
   #icon-cover {
     top: 15%;
@@ -522,12 +527,12 @@ html, body {
   .container {
     padding-left: 2rem;
     padding-right: 2rem; }
-    .container section {
+    .container #landing-images-container {
       width: 300px; }
-      .container section span {
-        padding: 3rem 2rem 0 2rem; }
-        .container section span a {
-          padding: 0; }
+    .container div span {
+      padding: 3rem 2rem 0 2rem; }
+      .container div span a {
+        padding: 0; }
     .container p {
       padding: 3rem 1rem;
       font-size: 1.2rem; }
