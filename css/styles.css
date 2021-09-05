@@ -6,12 +6,6 @@
 /*Page Titles mixin*/
 /*Sub Titles mixin*/
 /*Background swipe animater effect for anchor tags mixin*/
-#list-item {
-  opacity: 0; }
-
-#list-item.active {
-  opacity: 1; }
-
 /*HTML Body reset, also sets the document font, and smooth scrolling*/
 html, body {
   width: 100%;
@@ -64,9 +58,9 @@ html, body {
     text-decoration: none;
     position: relative;
     font-size: 1.2rem;
-    color: #969696; }
+    color: #555555; }
   .nav-container div a:visited {
-    color: #969696; }
+    color: #555555; }
   .nav-container div a:hover {
     color: white; }
 
@@ -77,10 +71,10 @@ html, body {
   padding: 2px 10px;
   text-decoration: none;
   transition: .5s;
-  color: #969696; }
+  color: #555555; }
 
 #name-logo:visited {
-  color: #969696; }
+  color: #555555; }
 
 #name-logo:hover {
   color: #93CAED;
@@ -108,7 +102,7 @@ html, body {
       #landing-full #landing-left #links-title-container #landing-links {
         display: flex;
         flex-direction: column;
-        padding-bottom: 5rem; }
+        padding-bottom: 3rem; }
         #landing-full #landing-left #links-title-container #landing-links a {
           transition: color 0.4s ease;
           position: relative; }
@@ -137,15 +131,15 @@ html, body {
           font-size: 1.5rem;
           z-index: 1;
           padding-left: 3rem;
-          color: #969696;
+          color: #555555;
           font-family: "Arsenal", sans-serif; }
         #landing-full #landing-left #links-title-container #landing-links a:visited {
-          color: #969696; }
+          color: #555555; }
         #landing-full #landing-left #links-title-container #landing-links a:hover {
           color: white; }
     #landing-full #landing-left h2 {
       font-size: 1.2rem;
-      color: #c8c8c8;
+      color: black;
       margin-top: 0;
       margin-bottom: 0; }
   #landing-full #landing-right {
@@ -188,14 +182,40 @@ html, body {
   overflow: hidden; }
 
 /*Contact my anchor tag styling*/
-#contact-me {
-  text-decoration: none;
-  color: #93CAED;
-  padding: 0; }
+#contact-me-container a {
+  transition: color 0.4s ease;
+  position: relative; }
+#contact-me-container a::before {
+  transform: scaleX(0);
+  transform-origin: bottom right; }
+#contact-me-container a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left; }
+#contact-me-container a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: #93CAED;
+  z-index: -1;
+  transition: transform .4s ease; }
+#contact-me-container #contact-me {
+  color: #555555;
+  padding: 0;
+  font-weight: 700; }
+#contact-me-container #contact-me:visited {
+  color: #555555; }
+#contact-me-container #contact-me:hover {
+  color: white; }
 
 /*Inline text span colour styling*/
 .text-highlight {
-  color: #EDB693; }
+  color: #555555;
+  font-weight: 700; }
 
 /*Typical container for pages including the About-me section, blog, project and contact pages*/
 .container {
@@ -215,16 +235,19 @@ html, body {
   .container h2 {
     padding-top: 4rem;
     text-align: center;
-    color: #969696;
+    color: #555555;
     font-family: "Arsenal", sans-serif;
     font-size: 2rem; }
   .container p {
     padding: 3rem 6rem;
     font-size: 1.5rem;
     text-align: center;
-    color: #969696;
+    color: #555555;
     padding-top: 0;
-    padding-bottom: 6rem; }
+    padding-bottom: 5rem; }
+
+#about-me-text {
+  padding-bottom: 0; }
 
 /*Index html images container styling*/
 #landing-images-container {
@@ -251,9 +274,55 @@ html, body {
     padding: 3rem 6rem;
     font-size: 1.5rem;
     text-align: center;
-    color: #969696;
+    color: #555555;
     padding-top: 7rem;
     padding-bottom: 2rem; }
+
+/*Skill bar component styling*/
+#skills-container {
+  display: block;
+  width: 100%;
+  padding-bottom: 8rem; }
+  #skills-container .skill-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 100%; }
+    #skills-container .skill-bar-container h3 {
+      width: 4rem;
+      text-align: right;
+      padding-right: 1rem; }
+    #skills-container .skill-bar-container .skill-bar {
+      width: 60%;
+      height: 1rem;
+      background-color: #cccccc;
+      border-radius: 5px; }
+      #skills-container .skill-bar-container .skill-bar #skill-bar-fill-html {
+        background-color: #CCE2CB;
+        height: 100%;
+        width: 80%;
+        border-radius: 5px; }
+      #skills-container .skill-bar-container .skill-bar #skill-bar-fill-css {
+        background-color: #EDB693;
+        height: 100%;
+        width: 70%;
+        border-radius: 5px; }
+      #skills-container .skill-bar-container .skill-bar #skill-bar-fill-js {
+        background-color: #F3B0C3;
+        height: 100%;
+        width: 30%;
+        border-radius: 5px; }
+      #skills-container .skill-bar-container .skill-bar #skill-bar-fill-ruby {
+        background-color: #93CAED;
+        height: 100%;
+        width: 20%;
+        border-radius: 5px; }
+      #skills-container .skill-bar-container .skill-bar #skill-bar-fill-react {
+        background-color: #FFFFB5;
+        height: 100%;
+        width: 25%;
+        border-radius: 5px; }
 
 /*Projects posts styling*/
 .projects-posts {
@@ -274,11 +343,12 @@ html, body {
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
-      .projects-posts li div h4 {
+      .projects-posts li div h2 {
         font-size: 1.5rem;
         padding: 0 1rem 1rem 1rem;
         margin: 0;
-        color: #969696; }
+        color: #555555;
+        text-align: left; }
       .projects-posts li div p {
         font-family: "Arsenal", sans-serif;
         font-size: 1rem;
@@ -315,9 +385,9 @@ html, body {
         margin-right: auto;
         padding: .5rem;
         text-decoration: none;
-        color: #969696; }
+        color: #555555; }
       .projects-posts li div a:visited {
-        color: #969696; }
+        color: #555555; }
       .projects-posts li div a:hover {
         color: white; }
     .projects-posts li img {
@@ -345,12 +415,13 @@ html, body {
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
-      .blog-posts li div h4 {
+      .blog-posts li div h2 {
         font-size: 1.5rem;
         padding: 0 1rem 1rem 1rem;
         margin: 0;
-        color: #969696;
-        padding-left: 0; }
+        color: #555555;
+        padding-left: 0;
+        text-align: left; }
       .blog-posts li div p {
         font-family: "Arsenal", sans-serif;
         font-size: 1rem;
@@ -386,9 +457,9 @@ html, body {
         margin-right: auto;
         padding: .5rem 0;
         text-decoration: none;
-        color: #969696; }
+        color: #555555; }
       .blog-posts li div a:visited {
-        color: #969696; }
+        color: #555555; }
       .blog-posts li div a:hover {
         color: white; }
     .blog-posts li img {
@@ -422,14 +493,14 @@ html, body {
   transition: transform .4s ease; }
 .read-more-container #read-more-tag {
   position: relative;
-  color: #969696; }
+  color: #555555; }
 
 #read-more-tag {
   font-size: 1.5rem;
   text-decoration: none; }
 
 #read-more-tag:visited {
-  color: #969696; }
+  color: #555555; }
 
 #read-more-tag:hover {
   color: white; }
@@ -478,7 +549,7 @@ html, body {
   margin-right: auto;
   padding-top: 3rem; }
   .icon-container a i {
-    color: #969696;
+    color: #555555;
     transition: 0.5s; }
   .icon-container a i:hover {
     color: #93CAED;
@@ -503,7 +574,7 @@ html, body {
   .projects-posts li {
     flex-direction: column;
     height: 32rem; }
-    .projects-posts li div h4 {
+    .projects-posts li div h2 {
       padding-left: 0;
       padding-top: 1rem; }
     .projects-posts li div p {
@@ -543,20 +614,26 @@ html, body {
   #landing-full #landing-left {
     width: 30vw; }
     #landing-full #landing-left #links-title-container #landing-links a {
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      padding-top: 0; }
     #landing-full #landing-left h2 {
-      font-size: 1.2rem; }
+      font-size: 1rem; }
   #landing-full #landing-right {
     width: 70vw; }
     #landing-full #landing-right div {
-      padding-top: 2rem; }
+      padding-top: 1rem; }
       #landing-full #landing-right div h1 {
         font-size: 6rem;
-        padding-top: 2rem; }
+        padding-top: 2rem;
+        color: white; }
 
   #portrait-container {
     width: 200px;
     padding-left: 20px; }
+
+  #icon-cover {
+    width: 150px;
+    height: 150px; }
 
   .container {
     padding-left: 2rem;
@@ -574,7 +651,7 @@ html, body {
   .projects-posts li {
     flex-direction: column;
     height: 32rem; }
-    .projects-posts li div h4 {
+    .projects-posts li div h2 {
       padding-left: 0;
       padding-top: 1rem; }
     .projects-posts li div p {
@@ -597,6 +674,6 @@ html, body {
 .copyright-footer {
   margin-top: 5rem;
   text-align: center;
-  color: #c8c8c8; }
+  color: #555555; }
 
 /*# sourceMappingURL=styles.css.map */

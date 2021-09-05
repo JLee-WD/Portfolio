@@ -1,0 +1,114 @@
+commit 706e7fb26caef39f8063a594fd8ae9a460b1b379
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Sun Sep 5 16:56:02 2021 +1000
+
+    Added comments to styles.css
+
+commit 70011a104276c4e14d69baa7b4ca6dece4b6fe89
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Sun Sep 5 13:47:05 2021 +1000
+
+    Validated CSS, added content on about me and blog pages
+
+commit a22a4ab101975ac7d9d7a83d361e2851ecf822b3
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Sun Sep 5 10:36:37 2021 +1000
+
+    Html validated
+
+commit 15acc3604dc45a4a8be991633c30f320356ddff4
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Sun Sep 5 01:37:28 2021 +1000
+
+    Amended Landing Page
+
+commit 6d5a540ba0aed34b77fbc02a8d4b6a7b1872a9c5
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Fri Sep 3 00:59:24 2021 +1000
+
+    Added photo icon on landing page
+
+commit 095e1a27a110a0cd406cb21516c42dfc2450b367
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Thu Sep 2 23:22:05 2021 +1000
+
+    Amended folder stucture for submission, fixed various anchor tags
+
+commit 0aad69085df23ce6a8a391b148b84bb75d849f10
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Thu Sep 2 21:38:43 2021 +1000
+
+    Added responsive design for laptop, tablet and phone
+
+commit ba8ae712cf9d7cb3e1885143750c61ff3c3eb7f4
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Wed Sep 1 00:41:33 2021 +1000
+
+    Added new font for landing page and nav logo, fixed contact page
+
+commit 4113826806159c328e87adc4ad8b9ece446b2619
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Tue Aug 31 17:04:32 2021 +1000
+
+    Upgraded contact page
+
+commit 87c38eba309940c38984687f763f74b8f97276f6
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Mon Aug 30 23:43:27 2021 +1000
+
+    Further upgraded projects page, upgraded blog page
+
+commit 8e29c0d609e65143bc92013603a9fa1c3102047e
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Sun Aug 29 23:54:49 2021 +1000
+
+    Renamed skills page to Projects. Upgraded presentation on projects page
+
+commit 4d72acecd64844b672313576bec084335b73117d
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Sun Aug 29 15:28:36 2021 +1000
+
+    Added font family, amended colour scheme to pale grays, further enhanced landing page
+
+commit 27980431e8f6d72be664739d5c438b012bdf911b
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Sun Aug 29 01:28:17 2021 +1000
+
+    Added links to homepage, removed nav, added responsive breakpoints
+
+commit 01e0b88d415306e1b6613ab9133cafd659a8371d
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Sat Aug 28 01:22:44 2021 +1000
+
+    Upgraded nav bar, upgraded landing page
+
+commit 89f9d55cc72d5861d10bc523c73f7d8f64feaeff
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Thu Aug 26 22:46:32 2021 +1000
+
+    Fixed hrefs in anchor tags, test deployment working
+
+commit dabb10e44400f6ebee5e8f7f49e2df149ab9f2cb
+Merge: 13c8026 2c78282
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Thu Aug 26 22:12:49 2021 +1000
+
+    Moved index html outside src folder
+
+commit 13c80269d3437b909558f6564a162bb9d1cfc4e3
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Thu Aug 26 21:59:42 2021 +1000
+
+    Fixed folder structure for test deployment
+
+commit 2c78282b7248b0ff0055c4528796e521218e8ee4
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Thu Aug 26 21:59:42 2021 +1000
+
+    Fixed folder structure for test deployment
+
+commit 02ae16ba1015ad6f9c24151396c8b983376e8851
+Author: justinl <cas022101@coderacademy.edu.au>
+Date:   Thu Aug 26 00:07:57 2021 +1000
+
+    Initial commit - html structure

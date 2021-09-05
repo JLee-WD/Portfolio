@@ -8,8 +8,8 @@
     <title>Home - Justin Lee - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d5e94de1f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Covered+By+Your+Grace&display=swap" integrity="sha256-GeSaXXVHpn8h6ySlrHHA7fEDRDfENLEQt34VG7M91MM=" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d5e94de1f5.js" integrity="sha512-Geo6D7ByhzY4XI4WxWoHuh5oBP6XhH1ezS43zcy+nViPwlznwJHkB/M3CTXca3C+shDopAvnZY/U7XDXtSzi1g==" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -42,8 +42,41 @@
 
     <main class="container" id="about-me">
             <h2>A little about me...</h2>
-            <p>Hi, my name is <span class="text-highlight">Justin Lee</span> and I enjoy building exceptional websites. I am a former architect, turned web developer because of my passion for anything IT. My journey started in 2020 when I had way too much free time on my hands. I started dabbling in <span class="text-highlight">HTML and CSS</span>, then ventured further into <span class="text-highlight">JS, RUBY,  REACT</span> and much more. I decided I needed professional training, so I am currently attending <span class="text-highlight">Coder Academy</span> in Sydney. Besides web design, I have tonnes of hobbies including archery, tennis, online gaming, badminton and jogging. Like what you see? <a id="contact-me" href="./pages/contact.html">Contact me</a> today!</p>
-        <div id="landing-images-container">
+            <p id="about-me-text">Hi, my name is <span class="text-highlight">Justin Lee</span> and I enjoy building exceptional websites. I am a former architect, turned web developer because of my passion for anything IT. My journey started in 2020 when I had way too much free time on my hands. I started dabbling in <span class="text-highlight">HTML and CSS</span>, then ventured further into <span class="text-highlight">JS, RUBY,  REACT</span> and much more. I decided I needed professional training, so I am currently attending <span class="text-highlight">Coder Academy</span> in Sydney. Besides web design, I have tonnes of hobbies including archery, tennis, online gaming, badminton and jogging.</p> 
+            <h2>Skills</h2>
+            <div id="skills-container">
+                <div class="skill-bar-container">
+                    <h3>HTML</h3>
+                    <div class="skill-bar">
+                        <div id="skill-bar-fill-html"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <h3>CSS</h3>
+                    <div class="skill-bar">
+                        <div id="skill-bar-fill-css"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <h3>JS</h3>
+                    <div class="skill-bar">
+                        <div id="skill-bar-fill-js"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <h3>Ruby</h3>
+                    <div class="skill-bar" id="ruby">
+                        <div id="skill-bar-fill-ruby"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <h3>React</h3>
+                    <div class="skill-bar" id="react">
+                        <div id="skill-bar-fill-react"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="landing-images-container">
                 <a href="./pages/blog.html">
                     <img alt="Architectural Arches" src="./resources/img/arches.jpg">
                 </a>
@@ -67,10 +100,10 @@
             <span>Like what you see? <a id="contact-me" href="./pages/contact.html">Contact me</a> today!</span>
         </div>
         <div class="icon-container">
-            <a href="https://stackoverflow.com/users/story/16671151"><i class="fab fa-stack-overflow fa-3x"></i></a>
-            <a href="https://www.linkedin.com/in/justin-lee26/"><i class="fab fa-linkedin fa-3x"></i></a>
-            <a href="https://github.com/JLee-WD"><i class="fab fa-github-square fa-3x"></i></a>
-            <a href="mailto:justin.lee26@gmail.com"><i class="fas fa-envelope fa-3x"></i></a>
+            <a alt="Stack Overflow Link" href="https://stackoverflow.com/users/story/16671151"><i class="fab fa-stack-overflow fa-3x"></i></a>
+            <a alt="LinkedIn Link" href="https://www.linkedin.com/in/justin-lee26/"><i class="fab fa-linkedin fa-3x"></i></a>
+            <a alt="Github Link" href="https://github.com/JLee-WD"><i class="fab fa-github-square fa-3x"></i></a>
+            <a alt="Email Link" href="mailto:justin.lee26@gmail.com"><i class="fas fa-envelope fa-3x"></i></a>
         </div>
     </main>
         

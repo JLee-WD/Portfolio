@@ -1,7 +1,7 @@
 /*SASS variables - Colours and fonts*/
 
 $light-gray-color: rgb(200, 200, 200);
-$dark-gray-color: rgb(150, 150, 150);
+$dark-gray-color: rgb(85, 85, 85);
 $white-color: white;
 $primary-color: #93CAED;
 $secondary-color: #EDB693;
@@ -75,15 +75,6 @@ $primary-font: 'Arsenal', sans-serif;
         transition: transform .4s ease;
     }
 }
-
-#list-item {
-    opacity: 0;
-}
-
-#list-item.active {
-    opacity: 1;
-}
-
 
 /*HTML Body reset, also sets the document font, and smooth scrolling*/
 html,body
@@ -168,7 +159,7 @@ html,body
             #landing-links {
                 display: flex;
                 flex-direction: column;
-                padding-bottom: 5rem;
+                padding-bottom: 3rem;
                 @include background-swipe();
                 a {
                     padding-top: 1rem;
@@ -190,7 +181,7 @@ html,body
         }
         h2 {
             font-size: 1.2rem;
-            color: $light-gray-color;
+            color: black;
             margin-top: 0;
             margin-bottom: 0;
         }
@@ -241,15 +232,26 @@ html,body
 }
 
 /*Contact my anchor tag styling*/
-#contact-me {
-    text-decoration: none;
-    color: $primary-color;
-    padding: 0;
+#contact-me-container {
+    @include background-swipe();
+    #contact-me {
+        color: $dark-gray-color;
+        padding: 0;
+        font-weight: 700;
+    }
+    #contact-me:visited {
+        color: $dark-gray-color;
+    }
+    #contact-me:hover {
+        color: $white-color;
+    }
 }
+
 
 /*Inline text span colour styling*/
 .text-highlight {
-    color: $secondary-color;
+    color: $dark-gray-color;
+    font-weight: 700;
 }
 
 /*Typical container for pages including the About-me section, blog, project and contact pages*/
@@ -271,8 +273,12 @@ html,body
     p {        
         @include large-paragraph-text();
         padding-top: 0;
-        padding-bottom: 6rem;
+        padding-bottom: 5rem;
     }
+}
+
+#about-me-text {
+    padding-bottom: 0;
 }
 
 /*Index html images container styling*/
@@ -306,6 +312,62 @@ html,body
     }   
 }
 
+/*Skill bar component styling*/
+
+#skills-container {
+    display: block;
+    width: 100%;
+    padding-bottom: 8rem;
+    .skill-bar-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5rem;
+        width: 100%;
+        h3 {
+            width: 4rem;
+            text-align: right;
+            padding-right: 1rem;
+        }
+        .skill-bar {
+            width: 60%;
+            height: 1rem;
+            background-color: rgb(204, 204, 204);
+            border-radius: 5px;
+            #skill-bar-fill-html {
+                background-color: #CCE2CB;
+                height: 100%;
+                width: 80%;
+                border-radius: 5px;
+            }
+            #skill-bar-fill-css {
+                background-color: $secondary-color;
+                height: 100%;
+                width: 70%;
+                border-radius: 5px;
+            }
+            #skill-bar-fill-js {
+                background-color: #F3B0C3;
+                height: 100%;
+                width: 30%;
+                border-radius: 5px;
+            }
+            #skill-bar-fill-ruby {
+                background-color: $primary-color;
+                height: 100%;
+                width: 20%;
+                border-radius: 5px;
+            }
+            #skill-bar-fill-react {
+                background-color: #FFFFB5;
+                height: 100%;
+                width: 25%;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
 /*Projects posts styling*/
 .projects-posts {
     padding-left: 0;
@@ -327,8 +389,9 @@ html,body
             flex-direction: column;
             justify-content: space-between;
 
-            h4 {
+            h2 {
                 @include sub-title();
+                text-align: left;
             }
             p {
                 @include paragraph-text();
@@ -383,9 +446,10 @@ html,body
             flex-direction: column;
             justify-content: space-between;
 
-            h4 {
+            h2 {
                 @include sub-title();
                 padding-left: 0;
+                text-align: left;
             }
             p {
                 @include paragraph-text();
@@ -527,7 +591,7 @@ html,body
             flex-direction: column;
             height: 32rem;
             div {
-                h4 {
+                h2 {
                     padding-left: 0;
                     padding-top: 1rem;
                 }
@@ -593,21 +657,23 @@ html,body
                 #landing-links {
                     a {
                         font-size: 1.2rem;
+                        padding-top: 0;
                     }
                 }
                 
             }
             h2 {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
         #landing-right {
             width: 70vw;
             div {
-                padding-top: 2rem;
+                padding-top: 1rem;
                 h1 {
                     font-size: 6rem;
                     padding-top: 2rem;
+                    color: $white-color;
                 }
             }
         }
@@ -615,6 +681,10 @@ html,body
     #portrait-container {
         width: 200px;
         padding-left: 20px;
+    }
+    #icon-cover {
+        width: 150px;
+        height: 150px;
     }
     .container {
         padding-left: 2rem;
@@ -640,7 +710,7 @@ html,body
             flex-direction: column;
             height: 32rem;
             div {
-                h4 {
+                h2 {
                     padding-left: 0;
                     padding-top: 1rem;
                 }
@@ -679,5 +749,5 @@ html,body
 .copyright-footer {
     margin-top: 5rem;
     text-align: center;
-    color: $light-gray-color;
+    color: $dark-gray-color;
 }
