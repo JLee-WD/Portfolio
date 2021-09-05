@@ -184,7 +184,7 @@ html,body
     #landing-right {
         height: 100vh;
         width: 70vw;
-        background-image: url("../resources/img/wave.jpg");
+        background-image: url("../resources/img/curve.jpg");
         background-size: cover;
         background-position: center;
         div {        
@@ -193,7 +193,7 @@ html,body
             height: 100%;
             justify-content: center;
             align-items: flex-start;
-            padding-top: 7rem;
+            // padding-top: 6rem;
             h1 {
                 font-size: 13rem;
                 margin: 0;
@@ -210,6 +210,10 @@ html,body
     text-decoration: none;
     color: $primary-color;
     padding: 0;
+}
+
+.text-highlight {
+    color: $primary-color;
 }
 
 // Clickable Icon Styling
@@ -244,9 +248,16 @@ html,body
     h1 {
         @include page-title();
     }
+    h2 {
+        padding-top: 4rem;
+        text-align: center;
+        color: $dark-gray-color;
+        font-family: $primary-font;
+        font-size: 2rem;
+    }
     p {        
         @include large-paragraph-text();
-        padding-top: 6rem;
+        padding-top: 0;
         padding-bottom: 6rem;
     }
 }
@@ -268,7 +279,7 @@ html,body
         }
     }
 }
-div {
+#contact-me-container {
     display: flex;
     justify-content: center;
     span {
@@ -367,6 +378,7 @@ div {
                 padding-right: 1rem;
                 padding-bottom: 0;
                 flex-grow: 2;
+                // overflow: hidden;
             }
             @include background-swipe();
             a {
@@ -448,6 +460,8 @@ div {
     }
 }
 
+// Clickable Icon Component Styling
+
 .icon-container {
     display: flex;
     justify-content: space-between;
@@ -462,6 +476,7 @@ div {
         }
         i:hover {
             color: $primary-color;
+            transform: scale(1.2);
         }
     }
 }
@@ -605,7 +620,7 @@ div {
             }
         }
         p {
-            padding: 3rem 1rem;
+            padding: 1rem 1rem;
             font-size: 1.2rem;
         }
     }

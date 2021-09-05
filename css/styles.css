@@ -132,7 +132,7 @@ html, body {
   #landing-full #landing-right {
     height: 100vh;
     width: 70vw;
-    background-image: url("../resources/img/wave.jpg");
+    background-image: url("../resources/img/curve.jpg");
     background-size: cover;
     background-position: center; }
     #landing-full #landing-right div {
@@ -140,8 +140,7 @@ html, body {
       flex-direction: column;
       height: 100%;
       justify-content: center;
-      align-items: flex-start;
-      padding-top: 7rem; }
+      align-items: flex-start; }
       #landing-full #landing-right div h1 {
         font-size: 13rem;
         margin: 0;
@@ -154,6 +153,9 @@ html, body {
   text-decoration: none;
   color: #93CAED;
   padding: 0; }
+
+.text-highlight {
+  color: #93CAED; }
 
 #portrait-container {
   display: flex;
@@ -188,12 +190,18 @@ html, body {
     padding-bottom: 3rem;
     text-align: center;
     font-size: 2.5rem; }
+  .container h2 {
+    padding-top: 4rem;
+    text-align: center;
+    color: #969696;
+    font-family: "Arsenal", sans-serif;
+    font-size: 2rem; }
   .container p {
     padding: 3rem 6rem;
     font-size: 1.5rem;
     text-align: center;
     color: #969696;
-    padding-top: 6rem;
+    padding-top: 0;
     padding-bottom: 6rem; }
 
 #landing-images-container {
@@ -212,10 +220,10 @@ html, body {
       height: 15rem;
       object-fit: cover; }
 
-div {
+#contact-me-container {
   display: flex;
   justify-content: center; }
-  div span {
+  #contact-me-container span {
     padding: 3rem 6rem;
     font-size: 1.5rem;
     text-align: center;
@@ -448,7 +456,8 @@ div {
     color: #969696;
     transition: 0.5s; }
   .icon-container a i:hover {
-    color: #93CAED; }
+    color: #93CAED;
+    transform: scale(1.2); }
 
 /*Media Breakpoints*/
 @media (max-width: 1200px) {
@@ -534,7 +543,7 @@ div {
       .container div span a {
         padding: 0; }
     .container p {
-      padding: 3rem 1rem;
+      padding: 1rem 1rem;
       font-size: 1.2rem; }
 
   .projects-posts li {
