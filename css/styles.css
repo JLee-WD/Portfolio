@@ -1,6 +1,18 @@
-/*Colours and fonts*/
+/*SASS variables - Colours and fonts*/
 /*SASS mixins*/
-/*HTML reset*/
+/*Content sizes for containers mixin*/
+/*Large Paragraph Text mixin*/
+/*Normal Paragraph Text mixin*/
+/*Page Titles mixin*/
+/*Sub Titles mixin*/
+/*Background swipe animater effect for anchor tags mixin*/
+#list-item {
+  opacity: 0; }
+
+#list-item.active {
+  opacity: 1; }
+
+/*HTML Body reset, also sets the document font, and smooth scrolling*/
 html, body {
   width: 100%;
   height: 100%;
@@ -10,7 +22,8 @@ html, body {
   font-family: "Arsenal", sans-serif;
   scroll-behavior: smooth; }
 
-/* Navbar settings */
+/*Navbar Styling */
+/*Outer container styling*/
 .header-outer-container {
   max-width: 1080px;
   margin-left: auto;
@@ -19,6 +32,7 @@ html, body {
   padding-right: 4rem;
   height: 60px; }
 
+/*Navbar component styling*/
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -56,6 +70,7 @@ html, body {
   .nav-container div a:hover {
     color: white; }
 
+/*Navbar name logo styling*/
 #name-logo {
   font-family: 'Covered By Your Grace', cursive;
   font-size: 2.5rem;
@@ -71,11 +86,13 @@ html, body {
   color: #93CAED;
   transform: scale(1.2); }
 
-/* Settings for landing headings */
+/*Index landing component styling */
 #landing-full {
   display: flex;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  /*Landing left side styling*/
+  /*Landing right side styling*/ }
   #landing-full #landing-left {
     height: 100vh;
     width: 40vw;
@@ -86,44 +103,46 @@ html, body {
     align-items: flex-end;
     text-align: right;
     padding-right: 3rem; }
-    #landing-full #landing-left #links-title-container #landing-links {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 5rem; }
-      #landing-full #landing-left #links-title-container #landing-links a {
-        transition: color 0.4s ease;
-        position: relative; }
-      #landing-full #landing-left #links-title-container #landing-links a::before {
-        transform: scaleX(0);
-        transform-origin: bottom right; }
-      #landing-full #landing-left #links-title-container #landing-links a:hover::before {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
-      #landing-full #landing-left #links-title-container #landing-links a::before {
-        content: " ";
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        inset: 0 0 0 0;
-        background: #93CAED;
-        z-index: -1;
-        transition: transform .4s ease; }
-      #landing-full #landing-left #links-title-container #landing-links a {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        text-decoration: none;
-        font-size: 1.5rem;
-        z-index: 1;
-        padding-left: 3rem;
-        color: #969696;
-        font-family: "Arsenal", sans-serif; }
-      #landing-full #landing-left #links-title-container #landing-links a:visited {
-        color: #969696; }
-      #landing-full #landing-left #links-title-container #landing-links a:hover {
-        color: white; }
+    #landing-full #landing-left #links-title-container {
+      /*Landing nav links styling*/ }
+      #landing-full #landing-left #links-title-container #landing-links {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5rem; }
+        #landing-full #landing-left #links-title-container #landing-links a {
+          transition: color 0.4s ease;
+          position: relative; }
+        #landing-full #landing-left #links-title-container #landing-links a::before {
+          transform: scaleX(0);
+          transform-origin: bottom right; }
+        #landing-full #landing-left #links-title-container #landing-links a:hover::before {
+          transform: scaleX(1);
+          transform-origin: bottom left; }
+        #landing-full #landing-left #links-title-container #landing-links a::before {
+          content: " ";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          inset: 0 0 0 0;
+          background: #93CAED;
+          z-index: -1;
+          transition: transform .4s ease; }
+        #landing-full #landing-left #links-title-container #landing-links a {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          text-decoration: none;
+          font-size: 1.5rem;
+          z-index: 1;
+          padding-left: 3rem;
+          color: #969696;
+          font-family: "Arsenal", sans-serif; }
+        #landing-full #landing-left #links-title-container #landing-links a:visited {
+          color: #969696; }
+        #landing-full #landing-left #links-title-container #landing-links a:hover {
+          color: white; }
     #landing-full #landing-left h2 {
       font-size: 1.2rem;
       color: #c8c8c8;
@@ -149,14 +168,7 @@ html, body {
         font-family: 'Covered By Your Grace', cursive;
         margin-top: -5rem; }
 
-#contact-me {
-  text-decoration: none;
-  color: #93CAED;
-  padding: 0; }
-
-.text-highlight {
-  color: #93CAED; }
-
+/*Landing Portrait Styling*/
 #portrait-container {
   display: flex;
   position: relative;
@@ -175,7 +187,17 @@ html, body {
   box-shadow: 0 0 0 10px white;
   overflow: hidden; }
 
-/*Index - About me styling*/
+/*Contact my anchor tag styling*/
+#contact-me {
+  text-decoration: none;
+  color: #93CAED;
+  padding: 0; }
+
+/*Inline text span colour styling*/
+.text-highlight {
+  color: #EDB693; }
+
+/*Typical container for pages including the About-me section, blog, project and contact pages*/
 .container {
   display: flex;
   flex-direction: column;
@@ -204,6 +226,7 @@ html, body {
     padding-top: 0;
     padding-bottom: 6rem; }
 
+/*Index html images container styling*/
 #landing-images-container {
   display: flex;
   flex-wrap: wrap;
@@ -220,6 +243,7 @@ html, body {
       height: 15rem;
       object-fit: cover; }
 
+/*Index html Contact me container styling*/
 #contact-me-container {
   display: flex;
   justify-content: center; }
@@ -231,7 +255,7 @@ html, body {
     padding-top: 7rem;
     padding-bottom: 2rem; }
 
-/*Recent Projects styling*/
+/*Projects posts styling*/
 .projects-posts {
   padding-left: 0;
   border-bottom: 1px solid #c8c8c8; }
@@ -374,6 +398,7 @@ html, body {
       object-fit: cover;
       padding-top: 1rem; }
 
+/*Read more blog posts component styling*/
 .read-more-container a {
   transition: color 0.4s ease;
   position: relative; }
@@ -409,7 +434,7 @@ html, body {
 #read-more-tag:hover {
   color: white; }
 
-/* Contact page styling */
+/* Contact form component styling */
 .contact-details-container form {
   display: flex;
   flex-direction: column;
@@ -459,7 +484,7 @@ html, body {
     color: #93CAED;
     transform: scale(1.2); }
 
-/*Media Breakpoints*/
+/*Media Breakpoints - Responsive Design*/
 @media (max-width: 1200px) {
   .container #landing-images-container {
     width: 800px; } }
@@ -568,7 +593,7 @@ html, body {
       padding-top: 1rem; }
     .blog-posts li img {
       width: 100%; } }
-/*Copyright footer styling*/
+/*Copyright footer component styling*/
 .copyright-footer {
   margin-top: 5rem;
   text-align: center;

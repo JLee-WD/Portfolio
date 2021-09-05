@@ -1,4 +1,4 @@
-/*Colours and fonts*/
+/*SASS variables - Colours and fonts*/
 
 $light-gray-color: rgb(200, 200, 200);
 $dark-gray-color: rgb(150, 150, 150);
@@ -9,6 +9,7 @@ $primary-font: 'Arsenal', sans-serif;
 
 /*SASS mixins*/
 
+/*Content sizes for containers mixin*/
 @mixin content-sizes {
     max-width: 1080px;
     margin-left: auto;
@@ -17,6 +18,7 @@ $primary-font: 'Arsenal', sans-serif;
     padding-right: 4rem;
 }
 
+/*Large Paragraph Text mixin*/
 @mixin large-paragraph-text {
     padding: 3rem 6rem;
     font-size: 1.5rem;
@@ -24,6 +26,7 @@ $primary-font: 'Arsenal', sans-serif;
     color: $dark-gray-color;
 }
 
+/*Normal Paragraph Text mixin*/
 @mixin paragraph-text {
     font-family: $primary-font;
     font-size: 1rem;
@@ -31,6 +34,7 @@ $primary-font: 'Arsenal', sans-serif;
     text-align: left;
 }
 
+/*Page Titles mixin*/
 @mixin page-title {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -38,6 +42,7 @@ $primary-font: 'Arsenal', sans-serif;
     font-size: 2.5rem;
 }
 
+/*Sub Titles mixin*/
 @mixin sub-title {
     font-size: 1.5rem;
     padding: 0 1rem 1rem 1rem;
@@ -45,6 +50,7 @@ $primary-font: 'Arsenal', sans-serif;
     color: $dark-gray-color;
 }
 
+/*Background swipe animater effect for anchor tags mixin*/
 @mixin background-swipe {
     a {
         transition: color 0.4s ease;
@@ -70,8 +76,16 @@ $primary-font: 'Arsenal', sans-serif;
     }
 }
 
-/*HTML reset*/
+#list-item {
+    opacity: 0;
+}
 
+#list-item.active {
+    opacity: 1;
+}
+
+
+/*HTML Body reset, also sets the document font, and smooth scrolling*/
 html,body
 {
     width: 100%;
@@ -83,13 +97,15 @@ html,body
     scroll-behavior: smooth;
 }
 
-/* Navbar settings */
+/*Navbar Styling */
 
+/*Outer container styling*/
 .header-outer-container {
     @include content-sizes();
     height: 60px;
 }
 
+/*Navbar component styling*/
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -111,10 +127,9 @@ html,body
             color: $white-color;
         }
     }
-
-
 }
 
+/*Navbar name logo styling*/
 #name-logo {
     font-family: 'Covered By Your Grace', cursive;
     font-size: 2.5rem;
@@ -123,23 +138,21 @@ html,body
     transition: .5s;
     color: $dark-gray-color;
 }
-
 #name-logo:visited {
     color: $dark-gray-color;
 }
-
 #name-logo:hover {
     color: $primary-color;
     transform: scale(1.2);
 }
 
 
-/* Settings for landing headings */
-
+/*Index landing component styling */
 #landing-full {
     display: flex;
     height: 100vh;
     position: relative;
+    /*Landing left side styling*/
     #landing-left {
         height: 100vh;
         width: 40vw;
@@ -151,28 +164,29 @@ html,body
         text-align: right;
         padding-right: 3rem;
         #links-title-container {
+            /*Landing nav links styling*/
             #landing-links {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 5rem;
-            @include background-swipe();
-            a {
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                text-decoration: none;
-                font-size: 1.5rem;
-                z-index: 1;
-                padding-left: 3rem;
-                color: $dark-gray-color;
-                font-family: $primary-font;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 5rem;
+                @include background-swipe();
+                a {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    z-index: 1;
+                    padding-left: 3rem;
+                    color: $dark-gray-color;
+                    font-family: $primary-font;
+                }
+                a:visited {
+                    color: $dark-gray-color;
+                }
+                a:hover {
+                    color: $white-color;
+                }
             }
-            a:visited {
-                color: $dark-gray-color;
-            }
-            a:hover {
-                color: $white-color;
-            }
-        }
         }
         h2 {
             font-size: 1.2rem;
@@ -181,6 +195,7 @@ html,body
             margin-bottom: 0;
         }
     }
+    /*Landing right side styling*/
     #landing-right {
         height: 100vh;
         width: 70vw;
@@ -193,7 +208,6 @@ html,body
             height: 100%;
             justify-content: center;
             align-items: flex-start;
-            // padding-top: 6rem;
             h1 {
                 font-size: 13rem;
                 margin: 0;
@@ -206,18 +220,7 @@ html,body
     }
 }
 
-#contact-me {
-    text-decoration: none;
-    color: $primary-color;
-    padding: 0;
-}
-
-.text-highlight {
-    color: $primary-color;
-}
-
-// Clickable Icon Styling
-
+/*Landing Portrait Styling*/
 #portrait-container {
     display: flex;
     position: relative;
@@ -226,7 +229,6 @@ html,body
     justify-content: flex-end;
     align-items: center;
 }
-
 #icon-cover {
     width: 200px;
     height: 200px;
@@ -238,8 +240,19 @@ html,body
     overflow: hidden;
 }
 
-/*Index - About me styling*/
+/*Contact my anchor tag styling*/
+#contact-me {
+    text-decoration: none;
+    color: $primary-color;
+    padding: 0;
+}
 
+/*Inline text span colour styling*/
+.text-highlight {
+    color: $secondary-color;
+}
+
+/*Typical container for pages including the About-me section, blog, project and contact pages*/
 .container {
     display: flex;
     flex-direction: column;
@@ -261,6 +274,8 @@ html,body
         padding-bottom: 6rem;
     }
 }
+
+/*Index html images container styling*/
 #landing-images-container {
     display: flex;
     flex-wrap: wrap;
@@ -279,6 +294,8 @@ html,body
         }
     }
 }
+
+/*Index html Contact me container styling*/
 #contact-me-container {
     display: flex;
     justify-content: center;
@@ -288,8 +305,8 @@ html,body
         padding-bottom: 2rem;
     }   
 }
-/*Recent Projects styling*/
 
+/*Projects posts styling*/
 .projects-posts {
     padding-left: 0;
     border-bottom: 1px solid $light-gray-color;
@@ -346,14 +363,13 @@ html,body
 }
 
 /* Blog posts styling */
-
 .blog-posts {
     padding-left: 0;
     border-bottom: 1px solid $light-gray-color;
     li{
         display: flex;
         list-style: none;
-            max-height: 30rem;
+        max-height: 30rem;
         padding-bottom: 3rem;
         border-top: 1px solid $light-gray-color;
         time {
@@ -369,12 +385,12 @@ html,body
 
             h4 {
                 @include sub-title();
-                    padding-left: 0;
+                padding-left: 0;
             }
             p {
                 @include paragraph-text();
                 padding-top: 0;
-                    padding-left: 0;
+                padding-left: 0;
                 padding-right: 1rem;
                 padding-bottom: 0;
                 flex-grow: 2;
@@ -383,7 +399,7 @@ html,body
             @include background-swipe();
             a {
                 margin-right: auto;
-                    padding: .5rem 0;
+                padding: .5rem 0;
                 text-decoration: none;
                 color: $dark-gray-color;
             }
@@ -403,7 +419,7 @@ html,body
         }
     }
 }
-
+/*Read more blog posts component styling*/
 .read-more-container {
     @include background-swipe();
     #read-more-tag {
@@ -422,8 +438,8 @@ html,body
     color: $white-color;
 }
 
-/* Contact page styling */
 
+/* Contact form component styling */
 .contact-details-container {
     form {
         display: flex;
@@ -460,8 +476,7 @@ html,body
     }
 }
 
-// Clickable Icon Component Styling
-
+// Clickable Socials Icon Component Styling
 .icon-container {
     display: flex;
     justify-content: space-between;
@@ -481,7 +496,7 @@ html,body
     }
 }
 
-/*Media Breakpoints*/
+/*Media Breakpoints - Responsive Design*/
 @media (max-width: 1200px) { 
     .container {
         #landing-images-container {
@@ -489,7 +504,6 @@ html,body
         }
     }
 }
-
 @media (max-width: 1024px) {
     .container{
         #landing-images-container {
@@ -504,12 +518,10 @@ html,body
             }
         }
     }
-
     #icon-cover {
     top: 15%;
     right: 20%;
     }
-    
     .projects-posts {
         li{
             flex-direction: column;
@@ -564,7 +576,6 @@ html,body
         }
     }
 }
-
 @media (max-width: 700px) {
     .header-outer-container {
         padding-left: 2rem;
@@ -664,8 +675,7 @@ html,body
     }
   }
 
-/*Copyright footer styling*/
-
+/*Copyright footer component styling*/
 .copyright-footer {
     margin-top: 5rem;
     text-align: center;
