@@ -334,7 +334,8 @@ html, body {
     height: 15rem;
     padding-bottom: 3rem;
     padding-top: 3rem;
-    border-top: 1px solid #c8c8c8; }
+    border-top: 1px solid #c8c8c8;
+    justify-content: space-between; }
     .projects-posts li time {
       font-size: 1.5rem;
       color: #93CAED;
@@ -342,7 +343,8 @@ html, body {
     .projects-posts li div {
       display: flex;
       flex-direction: column;
-      justify-content: space-between; }
+      justify-content: space-between;
+      width: 100%; }
       .projects-posts li div h2 {
         font-size: 1.5rem;
         padding: 0 1rem 1rem 1rem;
@@ -393,10 +395,11 @@ html, body {
     .projects-posts li img {
       float: right;
       min-width: 240px;
+      max-width: 240px;
       height: 240px;
       object-fit: cover; }
 
-/* Blog posts styling */
+/* Blog posts component styling */
 .blog-posts {
   padding-left: 0;
   border-bottom: 1px solid #c8c8c8; }
@@ -414,7 +417,8 @@ html, body {
     .blog-posts li div {
       display: flex;
       flex-direction: column;
-      justify-content: space-between; }
+      justify-content: space-between;
+      width: 100%; }
       .blog-posts li div h2 {
         font-size: 1.5rem;
         padding: 0 1rem 1rem 1rem;
@@ -573,7 +577,10 @@ html, body {
 
   .projects-posts li {
     flex-direction: column;
-    height: 32rem; }
+    height: 25rem;
+    justify-content: unset; }
+    .projects-posts li img {
+      max-width: 100%; }
     .projects-posts li div h2 {
       padding-left: 0;
       padding-top: 1rem; }

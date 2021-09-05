@@ -379,6 +379,7 @@ html,body
         padding-bottom: 3rem;
         padding-top: 3rem;
         border-top: 1px solid $light-gray-color;
+        justify-content: space-between;
         time {
             font-size: 1.5rem;
             color: $primary-color;
@@ -388,7 +389,7 @@ html,body
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            width: 100%;
             h2 {
                 @include sub-title();
                 text-align: left;
@@ -419,13 +420,14 @@ html,body
         img {
             float: right;
             min-width: 240px;
+            max-width: 240px;
             height: 240px;
             object-fit: cover;
         }
     }
 }
 
-/* Blog posts styling */
+/* Blog posts component styling */
 .blog-posts {
     padding-left: 0;
     border-bottom: 1px solid $light-gray-color;
@@ -445,7 +447,7 @@ html,body
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            width: 100%;
             h2 {
                 @include sub-title();
                 padding-left: 0;
@@ -589,7 +591,11 @@ html,body
     .projects-posts {
         li{
             flex-direction: column;
-            height: 32rem;
+            height: 25rem;
+            justify-content: unset;
+            img {
+                max-width: 100%;
+            }
             div {
                 h2 {
                     padding-left: 0;
